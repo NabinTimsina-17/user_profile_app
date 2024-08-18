@@ -1,5 +1,4 @@
-
-Here’s a comprehensive `README.md` file for your Flutter project:
+Here's an updated version of the `README.md` file that includes the project structure as requested:
 
 ---
 
@@ -14,7 +13,7 @@ Profile App is a basic Flutter application that displays a user profile with edi
 - **View and Edit Profile:** Users can view their profile information and edit details such as name, email, phone number, and address.
 - **Profile Picture:** Users can select and display a profile picture from their device gallery.
 - **View User Posts:** Users can navigate to a separate screen to view a list of posts.
-- **Local Storage:** User profile data are stored locally using SharedPreferences for persistence.
+- **Local Storage:** User profile data is stored locally using SharedPreferences for persistence.
 
 ## Setup and Installation
 
@@ -50,11 +49,51 @@ Profile App is a basic Flutter application that displays a user profile with edi
 
 ### Project Structure
 
-- **`lib/`**: Contains the main codebase.
-  - **`main.dart`**: The entry point of the application.
-  - **`user_post_page.dart`**: Screen to display the list of user posts.
+```
+lib/
+│
+├── constants/
+│   ├── colors.dart
+│   ├── strings.dart
+│   ├── assets.dart
+│
+├── models/
+│   ├── user_model.dart
+│   ├── post_model.dart
+│
+├── viewmodels/
+│   ├── profile_view_model.dart
+│   ├── user_posts_view_model.dart
+│
+├── views/
+│   ├── profile_page.dart
+│   ├── user_posts_page.dart
+│
+└── main.dart
+```
+
+- **`lib/constants/`**: Contains constants for colors, strings, and assets used throughout the application.
+  - **`colors.dart`**: Defines color constants.
+  - **`strings.dart`**: Defines string constants.
+  - **`assets.dart`**: Defines asset paths.
+
+- **`lib/models/`**: Contains model classes representing the data structures used in the app.
+  - **`user_model.dart`**: Model class for user data.
+  - **`post_model.dart`**: Model class for post data.
+
+- **`lib/viewmodels/`**: Contains ViewModel classes that manage the state and business logic of the application.
+  - **`profile_view_model.dart`**: ViewModel for managing profile data.
+  - **`user_posts_view_model.dart`**: ViewModel for managing user posts data.
+
+- **`lib/views/`**: Contains the UI components of the application.
+  - **`profile_page.dart`**: Screen for viewing and editing user profile.
+  - **`user_posts_page.dart`**: Screen for viewing the list of user posts.
+
+- **`lib/main.dart`**: The entry point of the application.
+
 - **`assets/`**: Contains image assets.
   - **`images/`**: Stores the profile picture and other images used in the app.
+
 - **`pubspec.yaml`**: Manages the project's dependencies and assets.
 
 ## Dependencies
@@ -125,6 +164,4 @@ flutter:
 
 - **Android**: Fully supported.
 - **iOS**: Fully supported.
-- **Web**: Partial support (image picker functionality may not work as expected on the web).
-
-This README.md file is well-structured and provides all the necessary information to set up, run, and understand your Flutter project. Adjust the URLs and any other project-specific details as needed.
+- **Web**: Fully Supported.
