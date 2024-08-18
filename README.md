@@ -164,4 +164,4 @@ flutter:
 
 - **Android**: Fully supported.
 - **iOS**: Fully supported.
-- **Web**: Fully Supported.
+- **Web**: Partially Supported.
