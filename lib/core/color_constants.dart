@@ -13,5 +13,4 @@ class AppColors {
   static const Color titleTextColor = Colors.black54;
   static const Color subtitleTextColor = Colors.black45;
   static const Color iconColor = Colors.grey;
-
 }
